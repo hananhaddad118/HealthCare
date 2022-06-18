@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label>كلمة المرور :</label>
-                <input type="text" class="form-control my-colorpicker1 colorpicker-element" name="password" required>
+                <input type="password" class="form-control my-colorpicker1 colorpicker-element" name="password" required>
 
             </div>
             <div class="form-group">

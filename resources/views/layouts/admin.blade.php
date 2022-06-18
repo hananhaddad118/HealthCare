@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             @if(Auth::user()->image !=null)
             <img src="/images/{{ Auth::user()->image }}" class="img-circle elevation-2" alt="User Image">
             @else
-            <img src="https://secure.gravatar.com/avatar/5ffa2a1ffeb767c60ab7e1052e385d5c?s=52&d=mm&r=g" class="img-circle elevation-2" alt="User Image">
+            <img src="/images/1.jpg" class="img-circle elevation-2" alt="User Image">
           @endif
           </div>
           <div class="info">

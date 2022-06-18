@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User_type;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,23 +16,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user_types = [
+       $user_types = [
             [
-               'name'=>'Admin ',
+                'name' => Str::random(10),
+                'email' => Str::random(10).'@gmail.com',
+                'password' => Hash::make('123456789'),
             
             ],
-            [
-               'name'=>'doctor ',
-              
-            ],
-            [
-               'name'=>'patient',
-              
-            ],
+          
         ];
     
         foreach ($user_types as $key => $user) {
-            User_type::create($user);
+            User::create($user);
         }
     }
 }
